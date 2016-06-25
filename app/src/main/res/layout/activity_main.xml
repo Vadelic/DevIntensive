@@ -1,16 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.activities.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.activities.MainActivity">
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.evs.demo.layout.FixedScrollingViewBehavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_110"
+                android:background="@color/grey"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/rank_et"
+                        style="@style/upBarNumbers"
+                        android:text="5"/>
+                    <TextView
+                        style="@style/upBarHints"
+                        android:text="@string/rank"/>
+                </LinearLayout>
+                <View style="@style/upBarLine"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/code_lines_number_et"
+                        style="@style/upBarNumbers"
+                        android:text="5"/>
+                    <TextView
+                        style="@style/upBarHints"
+                        android:text="@string/code_lines"/>
+                </LinearLayout>
+                <View style="@style/upBarLine"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/projects_et"
+                        style="@style/upBarNumbers"
+                        android:text="5"/>
+                    <TextView
+                        style="@style/upBarHints"
+                        android:text="@string/projects_count"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- phone -->
+            <LinearLayout
+                style="@style/item_layout">
+                <ImageView
+                    style="@style/icon.left"
+                    android:src="@drawable/ic_call_black_24dp"/>
+                <LinearLayout
+                    style="@style/item_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/phone_et"
+                            style="@style/editTxt"
+                            android:hint="@string/phone_mobile"
+                            android:inputType="phone"
+                            android:text="@string/phone_nom"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <ImageView
+                    style="@style/icon.right"
+                    android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+            </LinearLayout>
+            <View style="@style/item_line"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+            <!-- email -->
+            <LinearLayout style="@style/item_layout">
+
+                <ImageView
+                    style="@style/icon.left"
+                    android:src="@drawable/ic_email_black_24dp"
+                />
+
+                <LinearLayout style="@style/item_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/email_et"
+                            style="@style/editTxt"
+                            android:hint="@string/e_mail"
+                            android:inputType="textEmailAddress"
+                            android:text="@string/email_adress"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/icon.right"
+                    android:src="@drawable/ic_send_black_24dp"/>
+            </LinearLayout>
+            <View style="@style/item_line"/>
+
+            <!-- VK  -->
+            <LinearLayout style="@style/item_layout">
+
+                <ImageView
+                    style="@style/icon.left"
+                    android:src="@drawable/vk"
+                />
+
+                <LinearLayout style="@style/item_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/vk_et"
+                            style="@style/editTxt"
+                            android:hint="@string/vk"
+                            android:inputType="textWebEditText"
+                            android:text="@string/vk_profile"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/icon.right"
+                    android:src="@drawable/ic_remove_red_eye_black_24dp"/>
+            </LinearLayout>
+            <View style="@style/item_line"/>
+
+            <!-- repository  -->
+            <LinearLayout style="@style/item_layout">
+
+                <ImageView
+                    style="@style/icon.left"
+                    android:src="@drawable/github"
+                />
+
+                <LinearLayout style="@style/item_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/repository_et"
+                            style="@style/editTxt"
+                            android:hint="@string/repository"
+                            android:text="@string/git_account"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    style="@style/icon.right"
+                    android:src="@drawable/ic_remove_red_eye_black_24dp"/>
+            </LinearLayout>
+            <View style="@style/item_line"/>
+
+            <!-- about  -->
+            <LinearLayout style="@style/item_layout">
+                <ImageView
+                    style="@style/icon.left"
+                    android:src="@drawable/ic_person_black_24dp"/>
+                <LinearLayout style="@style/item_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/about_et"
+                            style="@style/editTxt"
+                            android:hint="@string/about"
+                            android:text="@string/blabla"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+
