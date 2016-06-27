@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Vadim Komyshenets</string>
+    <string name="phone_mobile">Phone mobile</string>
+    <string name="e_mail">e-mail</string>
+    <string name="vk">Profile VK</string>
+    <string name="repository">Profile GitHub</string>
+    <string name="about">About</string>
+    <string name="rank">Rating</string>
+    <string name="code_lines">Written code lines</string>
+    <string name="projects_count">Projects</string>
+
+    <string name="phone_nom">322-32-32</string>
+    <string name="email_adress">komyshenets@mail.ru</string>
+    <string name="vk_profile">vk.com/vadelic</string>
+    <string name="git_account">github.com/Vadelic</string>
+    <string name="blabla">I wrote this code scroll scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll scroll
+        scroll scroll scroll scroll scroll scroll scroll scroll </string>
 </resources>
